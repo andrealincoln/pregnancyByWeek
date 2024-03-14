@@ -1,7 +1,7 @@
 {
   "name": "my-pregnancy-tracker",
   "version": "0.1.0",
-  "homepage": "https://andrealincoln.github.io/my-pregnancy-tracker",
+  "homepage": "https://andrealincoln.github.io/pregnancyByWeek/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
