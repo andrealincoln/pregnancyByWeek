@@ -3,10 +3,12 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from "./HomePage";
 import WeekByWeekPage from "./WeekByWeekPage";
+import Topbar from "./Topbar";
 
 function App() {
   return (
     <Router>
+        <Topbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/week/:dueDate" element={<WeekByWeekPage />} />

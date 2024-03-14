@@ -4,7 +4,8 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { ReactComponent as StorkIcon } from './assets/StorkBlue.svg'; // Adjust the path as necessary
+import { ReactComponent as StorkIcon } from './assets/StorkBlue.svg';
+import './HomePage.css';
 
 function HomePage() {
   const [dueDate, setDueDate] = useState('');
@@ -35,7 +36,7 @@ function HomePage() {
               }}
               required
             />
-                <Button variant="contained" type="submit" endIcon={<StorkIcon style={{ width: '30px', height: '30px' }} />} style={{ marginTop: '20px' }}>
+                <Button variant="contained" type="submit" className="customButtonColor" endIcon={<StorkIcon style={{ width: '30px', height: '30px' }} />} style={{ marginTop: '20px' }}>
                   Start tracking
                 </Button>
           </form>
