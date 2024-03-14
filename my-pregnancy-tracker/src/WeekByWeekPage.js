@@ -4,8 +4,9 @@ import {Typography, Card, CardContent, Button, Box} from '@mui/material';
 
 function WeekByWeekPage() {
   const { dueDate } = useParams();
-  const currentWeek = calculatePregnancyWeekFromDueDate(dueDate);
   const daysPregnant = daysPregFromDueDate(dueDate);
+  const currentWeek = Math.floor(daysPregnant / 7);
+  const extraDays = daysPregnant- currentWeek*7;
 
   return (
     <Card sx={{  margin: 'auto', marginTop: 5 }}>
@@ -14,7 +15,7 @@ function WeekByWeekPage() {
           Pregnancy Week {currentWeek}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          You are currently in week {currentWeek} of your pregnancy.
+          You are {currentWeek} weeks and {extraDays} days pregnant.
         </Typography>
         <PregnancyInfoCard daysPregnant={daysPregnant} />
       <Box sx={{ marginTop: 2, marginBottom: 2 }}>
@@ -139,16 +140,6 @@ function daysPregFromDueDate(dueDate) {
   const days = diff / (1000 * 3600 * 24);
 
   return Math.floor(40*7 - days); // Assuming 40 weeks total, adjust as necessary
-}
-
-function calculatePregnancyWeekFromDueDate(dueDate) {
-  const due = new Date(dueDate);
-  const today = new Date();
-  const diff = due.getTime() - today.getTime();
-  const days = diff / (1000 * 3600 * 24);
-  const weeks = days / 7;
-
-  return Math.floor(40 - weeks); // Assuming 40 weeks total, adjust as necessary
 }
 
 export default WeekByWeekPage;
