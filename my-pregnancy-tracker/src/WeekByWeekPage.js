@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { Typography, Card, CardContent, Button } from '@mui/material';
+import {Typography, Card, CardContent, Button, Box} from '@mui/material';
 
 function WeekByWeekPage() {
   const { dueDate } = useParams();
@@ -8,7 +8,7 @@ function WeekByWeekPage() {
   const daysPregnant = daysPregFromDueDate(dueDate);
 
   return (
-    <Card sx={{ maxWidth: 345, margin: 'auto', marginTop: 5 }}>
+    <Card sx={{  margin: 'auto', marginTop: 5 }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           Pregnancy Week {currentWeek}
@@ -17,15 +17,78 @@ function WeekByWeekPage() {
           You are currently in week {currentWeek} of your pregnancy.
         </Typography>
         <PregnancyInfoCard daysPregnant={daysPregnant} />
+      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
         <Button
           variant="contained"
-          color="primary"
+          sx={{ backgroundColor: '#831529', color: '#ffffff' }}
           href={`https://www.whattoexpect.com/pregnancy/week-by-week/week-${currentWeek}.aspx`}
           target="_blank"
-          sx={{marginTop: 2}}
+          fullWidth
         >
-          Learn more about week {currentWeek}
+          Learn more about week {currentWeek} from What to Expect
         </Button>
+      </Box>
+
+      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: '#c46327', color: '#ffffff' }}
+          href={`https://www.babylist.com/hello-baby/${currentWeek}-weeks-pregnant`}
+          target="_blank"
+          fullWidth
+        >
+          Learn more about week {currentWeek} from Baby List
+        </Button>
+      </Box>
+
+      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: '#937c07', color: '#ffffff' }}
+          href={`https://www.babycenter.com/pregnancy/week-by-week/${currentWeek}-weeks-pregnant`}
+          target="_blank"
+          fullWidth
+        >
+          Learn more about week {currentWeek} from Baby Center
+        </Button>
+      </Box>
+
+      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: '#187303', color: '#ffffff' }}
+          href={`https://www.thebump.com/pregnancy-week-by-week/${currentWeek}-weeks-pregnant`}
+          target="_blank"
+          fullWidth
+        >
+          Learn more about week {currentWeek} from The Bump
+        </Button>
+      </Box>
+
+
+      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: '#032373', color: '#ffffff' }}
+          href={`https://www.pampers.com/en-us/pregnancy/pregnancy-calendar/${currentWeek}-weeks-pregnant`}
+          target="_blank"
+          fullWidth
+        >
+          Learn more about week {currentWeek} from Pampers
+        </Button>
+      </Box>
+
+      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+        <Button
+          variant="contained"
+          sx={{ backgroundColor: '#3d0373', color: '#ffffff' }}
+          href={`https://americanpregnancy.org/healthy-pregnancy/week-by-week/${currentWeek}-weeks-pregnant/`}
+          target="_blank"
+          fullWidth
+        >
+          Learn more about week {currentWeek} from The American Pregnancy Association
+        </Button>
+      </Box>
       </CardContent>
     </Card>
   );
