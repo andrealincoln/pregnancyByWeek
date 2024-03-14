@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import {Typography, Card, CardContent, Button, Box, Link} from '@mui/material';
+import {Typography, Card, CardContent, Button, Box, Link, Grid} from '@mui/material';
 import weekData from './assets/WeekDataJson.json';
-import fruitData from './assets/WeekFruits.json'
+import fruitData from './assets/WeekFruits.json';
+import defaultImage from './FruitImageAssets/defaultImage.jpg';
+
+
+function WeekImage({ weekNumber }) {
+  const [imgSrc, setImgSrc] = useState(null);
+
+  useEffect(() => {
+    // Dynamically import the image based on the week number
+    import(`./FruitImageAssets/week${weekNumber}.jpg`)
+      .then(image => {
+        setImgSrc(image.default);
+      })
+      .catch(error => {
+        console.log(`No image found for week ${weekNumber}:`, error);
+        // Handle the case where the image does not exist. For example, set a default image.
+        setImgSrc(defaultImage ); // Replace with actual path to a default image
+      });
+  }, [weekNumber]);
+
+  return imgSrc ? <img src={imgSrc} style={{ height: '400px' , borderRadius: '20px'}} alt={`Week ${weekNumber}`} /> : null;
+}
 
 function WeekByWeekPage() {
   const { dueDate } = useParams();
@@ -107,51 +128,58 @@ function PregnancyInfoCard({ daysPregnant }) {
   const weekInfo = weekData[weeksPregnant];
   const fruitName = fruitData[weeksPregnant];
 
-  if (weeksPregnant >= 4 && weeksPregnant <= 12) {
-    trimester = "First";
+  if (weeksPregnant >= 2 && weeksPregnant <= 12) {
+    trimester = "first";
     additionalInfo = "This is a crucial time for the development of the baby's vital organs.";
   } else if (weeksPregnant >= 13 && weeksPregnant <= 27) {
-    trimester = "Second";
+    trimester = "second";
     additionalInfo = "The risk of miscarriage drops significantly. This is often considered the easiest trimester.";
   } else if (weeksPregnant >= 28 && weeksPregnant <= 42) {
-    trimester = "Third";
+    trimester = "third";
     additionalInfo = "The baby is growing larger and getting ready for birth. You might start to feel more discomfort.";
   } else {
-    trimester = "Out of typical range";
+    trimester = "out of typical range";
     additionalInfo = "The number of days entered does not correspond with typical pregnancy duration.";
   }
 
-  return (
-    <Card sx={{ minWidth: 275, margin: 'auto', marginTop: 5, padding: 2 }}>
+return (
+    <Card sx={{ margin: 'auto', marginTop: 5, padding: 2 }}>
       <CardContent>
-        {fruitName ?
-            <Typography gutterBottom variant="h6" component="div">
-              Your fetus is the size of a {fruitName}
+        <Grid container spacing={2}>
+          <Grid item xs={6}>
+            {fruitName && (
+              <Typography gutterBottom variant="h5" component="div">
+                Your fetus is approximately the size of a {fruitName}
+              </Typography>
+            )}
+            {weekInfo && (
+              <>
+                <Typography variant="body1" color="text.secondary">
+                  Your fetus is an estimated {weekInfo["lengthInches"]}in long and weighs {weekInfo["weightLb"]}lbs.
+                  In metric your fetus is  {weekInfo["lengthCm"]}cm long and weighs {weekInfo["massG"]}g.
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  (
+                  <Link href="https://babyyourbaby.org/pregnancy/during-pregnancy/fetal-chart/" target="_blank" rel="noopener noreferrer">
+                     Data source is here
+                  </Link>)
+                </Typography>
+              </>
+            )}
+            <Typography gutterBottom variant="h5" component="div">
+              You are in the {trimester} trimester
             </Typography>
-            : null}
-        {weekInfo ?
-            <>
-            <Typography variant="body1" color="text.secondary">
-              Your fetus is {weekInfo["lengthInches"]}in long and weighs {weekInfo["weightLb"]}lbs.
-              In metric your fetus is {weekInfo["lengthCm"]}cm long and weighs {weekInfo["massG"]}g.
+            <Typography>
+              You have an estimated {daysToBirth} days until birth ({weeksToBirth} weeks).
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              (
-              <Link href="https://babyyourbaby.org/pregnancy/during-pregnancy/fetal-chart/" target="_blank" rel="noopener noreferrer">
-                 Data source is here
-              </Link>)
+              {additionalInfo}
             </Typography>
-            </>
-            : null}
-        <Typography gutterBottom variant="h5" component="div">
-          You are in the {trimester} Trimester
-        </Typography>
-        <Typography>
-          You have an estimated {daysToBirth} days until birth ({weeksToBirth} weeks).
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          {additionalInfo}
-        </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            {fruitName && <WeekImage weekNumber={weeksPregnant} />}
+          </Grid>
+        </Grid>
       </CardContent>
     </Card>
   );
