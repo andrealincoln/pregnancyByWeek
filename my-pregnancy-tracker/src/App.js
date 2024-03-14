@@ -7,7 +7,7 @@ import Topbar from "./Topbar";
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router>
         <Topbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
