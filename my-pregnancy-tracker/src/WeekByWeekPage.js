@@ -1,12 +1,15 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import {Typography, Card, CardContent, Button, Box} from '@mui/material';
+import {Typography, Card, CardContent, Button, Box, Link} from '@mui/material';
+import weekData from './assets/WeekDataJson.json';
+import fruitData from './assets/WeekFruits.json'
 
 function WeekByWeekPage() {
   const { dueDate } = useParams();
   const daysPregnant = daysPregFromDueDate(dueDate);
   const currentWeek = Math.floor(daysPregnant / 7);
   const extraDays = daysPregnant- currentWeek*7;
+
 
   return (
     <Card sx={{  margin: 'auto', marginTop: 5 }}>
@@ -101,6 +104,8 @@ function PregnancyInfoCard({ daysPregnant }) {
   const weeksToBirth = Math.floor(daysToBirth / 7);
   let trimester;
   let additionalInfo;
+  const weekInfo = weekData[weeksPregnant];
+  const fruitName = fruitData[weeksPregnant];
 
   if (weeksPregnant >= 4 && weeksPregnant <= 12) {
     trimester = "First";
@@ -119,11 +124,30 @@ function PregnancyInfoCard({ daysPregnant }) {
   return (
     <Card sx={{ minWidth: 275, margin: 'auto', marginTop: 5, padding: 2 }}>
       <CardContent>
+        {fruitName ?
+            <Typography gutterBottom variant="h6" component="div">
+              Your fetus is the size of a {fruitName}
+            </Typography>
+            : null}
+        {weekInfo ?
+            <>
+            <Typography variant="body1" color="text.secondary">
+              Your fetus is {weekInfo["lengthInches"]}in long and weighs {weekInfo["weightLb"]}lbs.
+              In metric your fetus is {weekInfo["lengthCm"]}cm long and weighs {weekInfo["massG"]}g.
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              (
+              <Link href="https://babyyourbaby.org/pregnancy/during-pregnancy/fetal-chart/" target="_blank" rel="noopener noreferrer">
+                 Data source is here
+              </Link>)
+            </Typography>
+            </>
+            : null}
         <Typography gutterBottom variant="h5" component="div">
           You are in the {trimester} Trimester
         </Typography>
         <Typography>
-          You have an estimated {daysToBirth} days until birth. Which is {weeksToBirth} weeks.
+          You have an estimated {daysToBirth} days until birth ({weeksToBirth} weeks).
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {additionalInfo}

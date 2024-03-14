@@ -1,0 +1,254 @@
+{
+  "8": {
+    "gestationalAge": "8 weeks",
+    "lengthInches": 0.63,
+    "weightLb": 0.0025,
+    "lengthCm": 1.6,
+    "massG": 1
+  },
+  "9": {
+    "gestationalAge": "9 weeks",
+    "lengthInches": 0.9,
+    "weightLb": 0.004375,
+    "lengthCm": 2.3,
+    "massG": 2
+  },
+  "10": {
+    "gestationalAge": "10 weeks",
+    "lengthInches": 1.22,
+    "weightLb": 0.00875,
+    "lengthCm": 3.1,
+    "massG": 4
+  },
+  "11": {
+    "gestationalAge": "11 weeks",
+    "lengthInches": 1.61,
+    "weightLb": 0.015625,
+    "lengthCm": 4.1,
+    "massG": 7
+  },
+  "12": {
+    "gestationalAge": "12 weeks",
+    "lengthInches": 2.13,
+    "weightLb": 0.030625,
+    "lengthCm": 5.4,
+    "massG": 14
+  },
+  "13": {
+    "gestationalAge": "13 weeks",
+    "lengthInches": 2.19,
+    "weightLb": 0.050625,
+    "lengthCm": 7.4,
+    "massG": 23
+  },
+  "14": {
+    "gestationalAge": "14 weeks",
+    "lengthInches": 3.42,
+    "weightLb": 0.095,
+    "lengthCm": 8.7,
+    "massG": 43
+  },
+  "15": {
+    "gestationalAge": "15 weeks",
+    "lengthInches": 3.98,
+    "weightLb": 0.154375,
+    "lengthCm": 10.1,
+    "massG": 70
+  },
+  "16": {
+    "gestationalAge": "16 weeks",
+    "lengthInches": 4.57,
+    "weightLb": 0.220625,
+    "lengthCm": 11.6,
+    "massG": 100
+  },
+  "17": {
+    "gestationalAge": "17 weeks",
+    "lengthInches": 5.12,
+    "weightLb": 0.30875,
+    "lengthCm": 13.0,
+    "massG": 140
+  },
+  "18": {
+    "gestationalAge": "18 weeks",
+    "lengthInches": 5.59,
+    "weightLb": 0.41875,
+    "lengthCm": 14.2,
+    "massG": 190
+  },
+  "19": {
+    "gestationalAge": "19 weeks",
+    "lengthInches": 6.02,
+    "weightLb": 0.529375,
+    "lengthCm": 15.3,
+    "massG": 240
+  },
+  "20": {
+    "gestationalAge": "20 weeks",
+    "lengthInches": 6.46,
+    "weightLb": 0.66125,
+    "lengthCm": 16.4,
+    "massG": 300
+  },
+  "21": {
+    "gestationalAge": "21 weeks",
+    "lengthInches": 10.51,
+    "weightLb": 0.79375,
+    "lengthCm": 26.7,
+    "massG": 360
+  },
+  "22": {
+    "gestationalAge": "22 weeks",
+    "lengthInches": 10.94,
+    "weightLb": 0.948125,
+    "lengthCm": 27.8,
+    "massG": 430
+  },
+  "23": {
+    "gestationalAge": "23 weeks",
+    "lengthInches": 11.38,
+    "weightLb": 1.1,
+    "lengthCm": 28.9,
+    "massG": 501
+  },
+  "24": {
+    "gestationalAge": "24 weeks",
+    "lengthInches": 11.81,
+    "weightLb": 1.32,
+    "lengthCm": 30.0,
+    "massG": 600
+  },
+  "25": {
+    "gestationalAge": "25 weeks",
+    "lengthInches": 13.62,
+    "weightLb": 1.46,
+    "lengthCm": 34.6,
+    "massG": 660
+  },
+  "26": {
+    "gestationalAge": "26 weeks",
+    "lengthInches": 14.02,
+    "weightLb": 1.68,
+    "lengthCm": 35.6,
+    "massG": 760
+  },
+  "27": {
+    "gestationalAge": "27 weeks",
+    "lengthInches": 14.41,
+    "weightLb": 1.93,
+    "lengthCm": 36.6,
+    "massG": 875
+  },
+  "28": {
+    "gestationalAge": "28 weeks",
+    "lengthInches": 14.8,
+    "weightLb": 2.22,
+    "lengthCm": 37.6,
+    "massG": 1005
+  },
+  "29": {
+    "gestationalAge": "29 weeks",
+    "lengthInches": 15.2,
+    "weightLb": 2.54,
+    "lengthCm": 38.6,
+    "massG": 1153
+  },
+  "30": {
+    "gestationalAge": "30 weeks",
+    "lengthInches": 15.71,
+    "weightLb": 2.91,
+    "lengthCm": 39.9,
+    "massG": 1319
+  },
+  "31": {
+    "gestationalAge": "31 weeks",
+    "lengthInches": 16.18,
+    "weightLb": 3.31,
+    "lengthCm": 41.1,
+    "massG": 1502
+  },
+  "32": {
+    "gestationalAge": "32 weeks",
+    "lengthInches": 16.19,
+    "weightLb": 3.75,
+    "lengthCm": 42.4,
+    "massG": 1702
+  },
+  "33": {
+    "gestationalAge": "33 weeks",
+    "lengthInches": 17.2,
+    "weightLb": 4.23,
+    "lengthCm": 43.7,
+    "massG": 1918
+  },
+  "34": {
+    "gestationalAge": "34 weeks",
+    "lengthInches": 17.72,
+    "weightLb": 4.73,
+    "lengthCm": 45.0,
+    "massG": 2146
+  },
+  "35": {
+    "gestationalAge": "35 weeks",
+    "lengthInches": 18.19,
+    "weightLb": 5.25,
+    "lengthCm": 46.2,
+    "massG": 2383
+  },
+  "36": {
+    "gestationalAge": "36 weeks",
+    "lengthInches": 18.66,
+    "weightLb": 5.78,
+    "lengthCm": 47.4,
+    "massG": 2622
+  },
+  "37": {
+    "gestationalAge": "37 weeks",
+    "lengthInches": 19.13,
+    "weightLb": 6.3,
+    "lengthCm": 48.6,
+    "massG": 2859
+  },
+  "38": {
+    "gestationalAge": "38 weeks",
+    "lengthInches": 19.61,
+    "weightLb": 6.8,
+    "lengthCm": 49.8,
+    "massG": 3083
+  },
+  "39": {
+    "gestationalAge": "39 weeks",
+    "lengthInches": 19.96,
+    "weightLb": 7.25,
+    "lengthCm": 50.7,
+    "massG": 3288
+  },
+  "40": {
+    "gestationalAge": "40 weeks",
+    "lengthInches": 20.16,
+    "weightLb": 7.63,
+    "lengthCm": 51.2,
+    "massG": 3462
+  },
+  "41": {
+    "gestationalAge": "41 weeks",
+    "lengthInches": 20.35,
+    "weightLb": 7.93,
+    "lengthCm": 51.7,
+    "massG": 3597
+  },
+  "42": {
+    "gestationalAge": "42 weeks",
+    "lengthInches": 20.28,
+    "weightLb": 8.12,
+    "lengthCm": 51.5,
+    "massG": 3685
+  },
+  "43": {
+    "gestationalAge": "43 weeks",
+    "lengthInches": 20.2,
+    "weightLb": 8.19,
+    "lengthCm": 51.3,
+    "massG": 3717
+  }
+}
