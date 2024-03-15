@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/pregnancyByWeek/static/css/main.e18634c1.css",
-    "main.js": "/pregnancyByWeek/static/js/main.6187aa2f.js",
+    "main.js": "/pregnancyByWeek/static/js/main.4de318be.js",
     "static/js/134.bf0a0184.chunk.js": "/pregnancyByWeek/static/js/134.bf0a0184.chunk.js",
     "static/js/443.b1a847d1.chunk.js": "/pregnancyByWeek/static/js/443.b1a847d1.chunk.js",
     "static/js/312.c2cc79ef.chunk.js": "/pregnancyByWeek/static/js/312.c2cc79ef.chunk.js",
@@ -10,25 +10,27 @@
     "static/js/740.0641e33c.chunk.js": "/pregnancyByWeek/static/js/740.0641e33c.chunk.js",
     "static/js/435.79ac223f.chunk.js": "/pregnancyByWeek/static/js/435.79ac223f.chunk.js",
     "static/js/974.224d3332.chunk.js": "/pregnancyByWeek/static/js/974.224d3332.chunk.js",
+    "static/js/861.76a37797.chunk.js": "/pregnancyByWeek/static/js/861.76a37797.chunk.js",
     "static/js/453.a00fe2af.chunk.js": "/pregnancyByWeek/static/js/453.a00fe2af.chunk.js",
     "static/media/week19.jpg": "/pregnancyByWeek/static/media/week19.3ecc44aea7d454c4d9f7.jpg",
     "static/media/week18.jpg": "/pregnancyByWeek/static/media/week18.142d1626116d4ba1bd53.jpg",
     "static/media/week16.jpg": "/pregnancyByWeek/static/media/week16.df51fab73c24d4ff94c1.jpg",
+    "static/media/week24.jpg": "/pregnancyByWeek/static/media/week24.1b3e1024d21e1a9d4aae.jpg",
     "static/media/week17.jpg": "/pregnancyByWeek/static/media/week17.bfc9b0bd42452a8698f4.jpg",
     "static/media/week23.jpg": "/pregnancyByWeek/static/media/week23.858f33acc33b6bb8c006.jpg",
     "static/media/Pram.svg": "/pregnancyByWeek/static/media/Pram.17fb16bfb1f1ea176ef9ccacd8a8bca5.svg",
     "static/media/week21.jpg": "/pregnancyByWeek/static/media/week21.7b40cfcd6a6a137d1656.jpg",
     "static/media/week22.jpg": "/pregnancyByWeek/static/media/week22.79b3992081b2afc31c3b.jpg",
-    "static/media/defaultImage.jpg": "/pregnancyByWeek/static/media/defaultImage.4471d63d6557a49f773c.jpg",
     "static/media/week20.jpg": "/pregnancyByWeek/static/media/week20.88fa706135d61a97c44f.jpg",
+    "static/media/defaultImage.jpg": "/pregnancyByWeek/static/media/defaultImage.407d6465c1cf890537c5.jpg",
     "static/media/StorkBlue.svg": "/pregnancyByWeek/static/media/StorkBlue.97d02ea90c0b5322f3ce96cdac96d917.svg",
     "index.html": "/pregnancyByWeek/index.html",
     "main.e18634c1.css.map": "/pregnancyByWeek/static/css/main.e18634c1.css.map",
-    "main.6187aa2f.js.map": "/pregnancyByWeek/static/js/main.6187aa2f.js.map",
+    "main.4de318be.js.map": "/pregnancyByWeek/static/js/main.4de318be.js.map",
     "453.a00fe2af.chunk.js.map": "/pregnancyByWeek/static/js/453.a00fe2af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e18634c1.css",
-    "static/js/main.6187aa2f.js"
+    "static/js/main.4de318be.js"
   ]
 }
