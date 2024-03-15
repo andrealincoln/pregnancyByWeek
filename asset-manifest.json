@@ -1,22 +1,28 @@
 {
   "files": {
     "main.css": "/pregnancyByWeek/static/css/main.e18634c1.css",
-    "main.js": "/pregnancyByWeek/static/js/main.e5fd4ed9.js",
+    "main.js": "/pregnancyByWeek/static/js/main.e12eb4fb.js",
     "static/js/134.bf0a0184.chunk.js": "/pregnancyByWeek/static/js/134.bf0a0184.chunk.js",
     "static/js/443.b1a847d1.chunk.js": "/pregnancyByWeek/static/js/443.b1a847d1.chunk.js",
+    "static/js/312.c2cc79ef.chunk.js": "/pregnancyByWeek/static/js/312.c2cc79ef.chunk.js",
+    "static/js/877.f6b27a21.chunk.js": "/pregnancyByWeek/static/js/877.f6b27a21.chunk.js",
+    "static/js/113.453f851d.chunk.js": "/pregnancyByWeek/static/js/113.453f851d.chunk.js",
     "static/js/453.a00fe2af.chunk.js": "/pregnancyByWeek/static/js/453.a00fe2af.chunk.js",
+    "static/media/week19.jpg": "/pregnancyByWeek/static/media/week19.3ecc44aea7d454c4d9f7.jpg",
+    "static/media/week18.jpg": "/pregnancyByWeek/static/media/week18.142d1626116d4ba1bd53.jpg",
     "static/media/week16.jpg": "/pregnancyByWeek/static/media/week16.df51fab73c24d4ff94c1.jpg",
     "static/media/week17.jpg": "/pregnancyByWeek/static/media/week17.bfc9b0bd42452a8698f4.jpg",
     "static/media/Pram.svg": "/pregnancyByWeek/static/media/Pram.17fb16bfb1f1ea176ef9ccacd8a8bca5.svg",
     "static/media/defaultImage.jpg": "/pregnancyByWeek/static/media/defaultImage.4471d63d6557a49f773c.jpg",
+    "static/media/week20.jpg": "/pregnancyByWeek/static/media/week20.88fa706135d61a97c44f.jpg",
     "static/media/StorkBlue.svg": "/pregnancyByWeek/static/media/StorkBlue.97d02ea90c0b5322f3ce96cdac96d917.svg",
     "index.html": "/pregnancyByWeek/index.html",
     "main.e18634c1.css.map": "/pregnancyByWeek/static/css/main.e18634c1.css.map",
-    "main.e5fd4ed9.js.map": "/pregnancyByWeek/static/js/main.e5fd4ed9.js.map",
+    "main.e12eb4fb.js.map": "/pregnancyByWeek/static/js/main.e12eb4fb.js.map",
     "453.a00fe2af.chunk.js.map": "/pregnancyByWeek/static/js/453.a00fe2af.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e18634c1.css",
-    "static/js/main.e5fd4ed9.js"
+    "static/js/main.e12eb4fb.js"
   ]
 }
