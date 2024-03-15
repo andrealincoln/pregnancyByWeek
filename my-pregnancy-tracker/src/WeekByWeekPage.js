@@ -39,7 +39,7 @@ function WeekByWeekPage() {
       <Card sx={{  margin: 'auto', marginTop: 5, backgroundColor: cardBackgroundColor}}>
         <CardContent>
           <Grid container spacing={2}>
-            <Grid item xs={4}>
+            <Grid item xs={5}>
               <Typography gutterBottom variant="h5" component="div">
                 Pregnancy Week {currentWeek}
               </Typography>
@@ -47,8 +47,16 @@ function WeekByWeekPage() {
                 You are {currentWeek} weeks and {extraDays} days pregnant.
               </Typography>
             </Grid>
-            <Grid item xs={3}>
+            <Grid item xs={2}>
               {<WeekImage weekNumber={currentWeek} />}
+            </Grid>
+            <Grid item xs={5}  sx={{ textAlign: 'right' }}>
+              <Typography gutterBottom variant="h5" component="div">
+                You can do it!
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                Everything is going to be okay.
+              </Typography>
             </Grid>
           </Grid>
           <PregnancyInfoCard daysPregnant={daysPregnant} />
