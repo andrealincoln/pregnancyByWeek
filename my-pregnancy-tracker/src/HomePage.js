@@ -31,8 +31,9 @@ function HomePage() {
       <Card sx={{ minWidth: 275 }}>
         <CardContent style={{ textAlign: 'center' }}>
           <h1>Welcome to <span style={{ fontWeight: 'bold' }}>My Pregnancy Tracker</span>!</h1>
-          <p>This tool will let you make a link to a page which will track your pregnancy week by week!</p>
-          <p>Share the link with a partner, friends, family, or just yourself!</p>
+          <p>This page will let you make a static link to a page which will track what week you are in your pregnancy!</p>
+          <p>The pages will have a tiny bit of information and links to week-by-week pregnancy resources on other sites.</p>
+          <p>Share the link with a partner, friends, family, or just yourself! </p>
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px' }}>
             <TextField
               id="date"
