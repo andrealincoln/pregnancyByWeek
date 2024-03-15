@@ -26,7 +26,7 @@ function WeekImage({ weekNumber }) {
 }
 
 function WeekByWeekPage() {
-  const { dueDate } = useParams();
+  const { dueDate, name } = useParams();
   const daysPregnant = daysPregFromDueDate(dueDate);
   const currentWeek = Math.floor(daysPregnant / 7);
   const extraDays = daysPregnant- currentWeek*7;
@@ -44,22 +44,35 @@ function WeekByWeekPage() {
                 Pregnancy Week {currentWeek}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                You are {currentWeek} weeks and {extraDays} days pregnant.
+                {name ? name + " is" : "You are"} {currentWeek} weeks and {extraDays} days pregnant.
               </Typography>
             </Grid>
             <Grid item xs={2}>
               {<WeekImage weekNumber={currentWeek} />}
             </Grid>
             <Grid item xs={5}  sx={{ textAlign: 'right' }}>
-              <Typography gutterBottom variant="h5" component="div">
-                You can do it!
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Everything is going to be okay.
-              </Typography>
+              {name ?
+                  <>
+                    <Typography gutterBottom variant="h5" component="div">
+                      {name} is pregnant!
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      They got this!
+                    </Typography>
+                  </>
+                  :
+                  <>
+                    <Typography gutterBottom variant="h5" component="div">
+                      You can do it!
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Everything is going to be okay.
+                    </Typography>
+                  </>
+              }
             </Grid>
           </Grid>
-          <PregnancyInfoCard daysPregnant={daysPregnant} />
+          <PregnancyInfoCard daysPregnant={daysPregnant} name={name} />
           <ExternalRainbowButtons currentWeek={currentWeek} />
         </CardContent>
       </Card>
@@ -146,7 +159,7 @@ function ExternalRainbowButtons({currentWeek}){
   );
 }
 
-function PregnancyInfoCard({ daysPregnant }) {
+function PregnancyInfoCard({ daysPregnant, name }) {
   const weeksPregnant = Math.floor(daysPregnant / 7);
   const daysToBirth = 40*7-daysPregnant;
   const weeksToBirth = Math.floor(daysToBirth / 7);
@@ -154,6 +167,9 @@ function PregnancyInfoCard({ daysPregnant }) {
   let additionalInfo;
   const weekInfo = weekData[weeksPregnant];
   const fruitName = fruitData[weeksPregnant];
+  const yourComputed = name ? name+"'s" : "Your";
+  const youAreComputed = name ? name+" is" : "You are";
+  const youHaveComputed = name ? name+" has" : "You have";
 
   const infoBackgroundColor = "#edfcf9";
 
@@ -178,13 +194,13 @@ return (
           <Grid item xs={12}>
             {fruitName && (
               <Typography gutterBottom variant="h5" component="div">
-                Your fetus is approximately the size of a {fruitName}
+                {yourComputed} fetus is approximately the size of a {fruitName}
               </Typography>
             )}
             {weekInfo && (
               <>
                 <Typography variant="body1" color="text.secondary">
-                  Your fetus is an estimated {weekInfo["lengthInches"]}in long and weighs {weekInfo["weightLb"]}lbs.
+                  {yourComputed} fetus is an estimated {weekInfo["lengthInches"]}in long and weighs {weekInfo["weightLb"]}lbs.
                   In metric your fetus is  {weekInfo["lengthCm"]}cm long and weighs {weekInfo["massG"]}g.
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
@@ -196,10 +212,10 @@ return (
               </>
             )}
             <Typography gutterBottom variant="h5" component="div">
-              You are in the {trimester} trimester
+              {youAreComputed} in the {trimester} trimester
             </Typography>
             <Typography>
-              You have an estimated {daysToBirth} days until birth ({weeksToBirth} weeks).
+              {youHaveComputed} an estimated {daysToBirth} days until birth ({weeksToBirth} weeks).
             </Typography>
             <Typography variant="body2" color="text.secondary">
               {additionalInfo}

@@ -8,12 +8,22 @@ import { ReactComponent as StorkIcon } from './assets/StorkBlue.svg';
 import './HomePage.css';
 
 function HomePage() {
+  const [name, setName] = useState(''); // Add state for the name
   const [dueDate, setDueDate] = useState('');
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate(`/week/${dueDate}`);
+    // If a name is provided, include it in the navigation path
+    const path = name ? `/week/${dueDate}/${name}` : `/week/${dueDate}`;
+    navigate(path);
+  };
+
+  const handleNameChange = (event) => {
+    const asciiOnly = event.target.value.replace(/[^ -~]+/g, ""); // Regex to keep ASCII characters only
+    if (asciiOnly.length <= 40) {
+      setName(asciiOnly);
+    }
   };
 
   return (
@@ -35,6 +45,17 @@ function HomePage() {
                 shrink: true,
               }}
               required
+            />
+            <TextField
+              id="name"
+              label="Your Name (optional)"
+              type="text"
+              value={name}
+              onChange={handleNameChange}
+              inputProps={{ maxLength: 40 }} // This limits the length of input
+              sx={{ width: 220 }}
+              helperText={`${name.length}/40`} // Shows the character count
+              variant="outlined"
             />
                 <Button variant="contained" type="submit" className="customButtonColor" endIcon={<StorkIcon style={{ width: '30px', height: '30px' }} />} style={{ marginTop: '20px' }}>
                   Start tracking

@@ -10,7 +10,7 @@ function App() {
         <Topbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/week/:dueDate" element={<WeekByWeekPage />} />
+        <Route path="/week/:dueDate/:name?" element={<WeekByWeekPage />} />
       </Routes>
     </Router>
   );
