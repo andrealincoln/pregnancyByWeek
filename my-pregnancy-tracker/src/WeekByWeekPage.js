@@ -31,98 +31,110 @@ function WeekByWeekPage() {
   const currentWeek = Math.floor(daysPregnant / 7);
   const extraDays = daysPregnant- currentWeek*7;
 
+  const pageBackgroundColor = "#eef8fc"; // Example pastel color for the page
+  const cardBackgroundColor = "#fdfcf6"; // Example pastel color for the cards
 
   return (
-    <Card sx={{  margin: 'auto', marginTop: 5 }}>
-      <CardContent>
-        <Grid container spacing={2}>
-          <Grid item xs={4}>
-            <Typography gutterBottom variant="h5" component="div">
-              Pregnancy Week {currentWeek}
-            </Typography>
-            <Typography variant="body2" color="text.secondary">
-              You are {currentWeek} weeks and {extraDays} days pregnant.
-            </Typography>
+    <Box sx={{ backgroundColor: pageBackgroundColor, minHeight: '100vh', padding: 2 }}>
+      <Card sx={{  margin: 'auto', marginTop: 5, backgroundColor: cardBackgroundColor}}>
+        <CardContent>
+          <Grid container spacing={2}>
+            <Grid item xs={4}>
+              <Typography gutterBottom variant="h5" component="div">
+                Pregnancy Week {currentWeek}
+              </Typography>
+              <Typography variant="body2" color="text.secondary">
+                You are {currentWeek} weeks and {extraDays} days pregnant.
+              </Typography>
+            </Grid>
+            <Grid item xs={3}>
+              {<WeekImage weekNumber={currentWeek} />}
+            </Grid>
           </Grid>
-          <Grid item xs={3}>
-            {<WeekImage weekNumber={currentWeek} />}
-          </Grid>
-        </Grid>
-        <PregnancyInfoCard daysPregnant={daysPregnant} />
-      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: '#831529', color: '#ffffff' }}
-          href={`https://www.whattoexpect.com/pregnancy/week-by-week/week-${currentWeek}.aspx`}
-          target="_blank"
-          fullWidth
-        >
-          Learn more about week {currentWeek} from What to Expect
-        </Button>
-      </Box>
+          <PregnancyInfoCard daysPregnant={daysPregnant} />
+          <ExternalRainbowButtons currentWeek={currentWeek} />
+        </CardContent>
+      </Card>
+    </Box>
+  );
+}
 
-      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: '#c46327', color: '#ffffff' }}
-          href={`https://www.babylist.com/hello-baby/${currentWeek}-weeks-pregnant`}
-          target="_blank"
-          fullWidth
-        >
-          Learn more about week {currentWeek} from Baby List
-        </Button>
-      </Box>
+function ExternalRainbowButtons({currentWeek}){
+  return(
+      <>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: '#831529', color: '#ffffff' }}
+            href={`https://www.whattoexpect.com/pregnancy/week-by-week/week-${currentWeek}.aspx`}
+            target="_blank"
+            fullWidth
+          >
+            Learn more about week {currentWeek} from What to Expect
+          </Button>
+        </Box>
 
-      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: '#937c07', color: '#ffffff' }}
-          href={`https://www.babycenter.com/pregnancy/week-by-week/${currentWeek}-weeks-pregnant`}
-          target="_blank"
-          fullWidth
-        >
-          Learn more about week {currentWeek} from Baby Center
-        </Button>
-      </Box>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: '#c46327', color: '#ffffff' }}
+            href={`https://www.babylist.com/hello-baby/${currentWeek}-weeks-pregnant`}
+            target="_blank"
+            fullWidth
+          >
+            Learn more about week {currentWeek} from Baby List
+          </Button>
+        </Box>
 
-      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: '#187303', color: '#ffffff' }}
-          href={`https://www.thebump.com/pregnancy-week-by-week/${currentWeek}-weeks-pregnant`}
-          target="_blank"
-          fullWidth
-        >
-          Learn more about week {currentWeek} from The Bump
-        </Button>
-      </Box>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: '#937c07', color: '#ffffff' }}
+            href={`https://www.babycenter.com/pregnancy/week-by-week/${currentWeek}-weeks-pregnant`}
+            target="_blank"
+            fullWidth
+          >
+            Learn more about week {currentWeek} from Baby Center
+          </Button>
+        </Box>
+
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: '#187303', color: '#ffffff' }}
+            href={`https://www.thebump.com/pregnancy-week-by-week/${currentWeek}-weeks-pregnant`}
+            target="_blank"
+            fullWidth
+          >
+            Learn more about week {currentWeek} from The Bump
+          </Button>
+        </Box>
 
 
-      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: '#032373', color: '#ffffff' }}
-          href={`https://www.pampers.com/en-us/pregnancy/pregnancy-calendar/${currentWeek}-weeks-pregnant`}
-          target="_blank"
-          fullWidth
-        >
-          Learn more about week {currentWeek} from Pampers
-        </Button>
-      </Box>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: '#032373', color: '#ffffff' }}
+            href={`https://www.pampers.com/en-us/pregnancy/pregnancy-calendar/${currentWeek}-weeks-pregnant`}
+            target="_blank"
+            fullWidth
+          >
+            Learn more about week {currentWeek} from Pampers
+          </Button>
+        </Box>
 
-      <Box sx={{ marginTop: 2, marginBottom: 2 }}>
-        <Button
-          variant="contained"
-          sx={{ backgroundColor: '#3d0373', color: '#ffffff' }}
-          href={`https://americanpregnancy.org/healthy-pregnancy/week-by-week/${currentWeek}-weeks-pregnant/`}
-          target="_blank"
-          fullWidth
-        >
-          Learn more about week {currentWeek} from The American Pregnancy Association
-        </Button>
-      </Box>
-      </CardContent>
-    </Card>
+        <Box sx={{ marginTop: 2, marginBottom: 2 }}>
+          <Button
+            variant="contained"
+            sx={{ backgroundColor: '#3d0373', color: '#ffffff' }}
+            href={`https://americanpregnancy.org/healthy-pregnancy/week-by-week/${currentWeek}-weeks-pregnant/`}
+            target="_blank"
+            fullWidth
+          >
+            Learn more about week {currentWeek} from The American Pregnancy Association
+          </Button>
+        </Box>
+      </>
   );
 }
 
@@ -134,6 +146,8 @@ function PregnancyInfoCard({ daysPregnant }) {
   let additionalInfo;
   const weekInfo = weekData[weeksPregnant];
   const fruitName = fruitData[weeksPregnant];
+
+  const infoBackgroundColor = "#edfcf9";
 
   if (weeksPregnant >= 2 && weeksPregnant <= 12) {
     trimester = "first";
@@ -150,7 +164,7 @@ function PregnancyInfoCard({ daysPregnant }) {
   }
 
 return (
-    <Card sx={{ margin: 'auto', marginTop: 5, padding: 2 }}>
+    <Card sx={{ margin: 'auto', marginTop: 5, padding: 2 , backgroundColor:infoBackgroundColor}}>
       <CardContent>
         <Grid container spacing={2}>
           <Grid item xs={12}>
