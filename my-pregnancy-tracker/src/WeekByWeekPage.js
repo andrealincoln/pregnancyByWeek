@@ -32,7 +32,7 @@ function WeekByWeekPage() {
   const extraDays = daysPregnant- currentWeek*7;
 
   const pageBackgroundColor = "#eef8fc"; // Example pastel color for the page
-  const cardBackgroundColor = "#fdfcf6"; // Example pastel color for the cards
+  const cardBackgroundColor = "#fffffb"; // Example pastel color for the cards
 
   return (
     <Box sx={{ backgroundColor: pageBackgroundColor, minHeight: '100vh', padding: 2 }}>
