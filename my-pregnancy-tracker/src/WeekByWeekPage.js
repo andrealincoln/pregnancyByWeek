@@ -22,7 +22,7 @@ function WeekImage({ weekNumber }) {
       });
   }, [weekNumber]);
 
-  return imgSrc ? <img src={imgSrc} style={{ height: '400px' , borderRadius: '20px'}} alt={`Week ${weekNumber}`} /> : null;
+  return imgSrc ? <img src={imgSrc} style={{ height: '100px' , borderRadius: '50px'}} alt={`Week ${weekNumber}`} /> : null;
 }
 
 function WeekByWeekPage() {
@@ -35,12 +35,19 @@ function WeekByWeekPage() {
   return (
     <Card sx={{  margin: 'auto', marginTop: 5 }}>
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Pregnancy Week {currentWeek}
-        </Typography>
-        <Typography variant="body2" color="text.secondary">
-          You are {currentWeek} weeks and {extraDays} days pregnant.
-        </Typography>
+        <Grid container spacing={2}>
+          <Grid item xs={4}>
+            <Typography gutterBottom variant="h5" component="div">
+              Pregnancy Week {currentWeek}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              You are {currentWeek} weeks and {extraDays} days pregnant.
+            </Typography>
+          </Grid>
+          <Grid item xs={3}>
+            {<WeekImage weekNumber={currentWeek} />}
+          </Grid>
+        </Grid>
         <PregnancyInfoCard daysPregnant={daysPregnant} />
       <Box sx={{ marginTop: 2, marginBottom: 2 }}>
         <Button
@@ -146,7 +153,7 @@ return (
     <Card sx={{ margin: 'auto', marginTop: 5, padding: 2 }}>
       <CardContent>
         <Grid container spacing={2}>
-          <Grid item xs={6}>
+          <Grid item xs={12}>
             {fruitName && (
               <Typography gutterBottom variant="h5" component="div">
                 Your fetus is approximately the size of a {fruitName}
@@ -175,9 +182,6 @@ return (
             <Typography variant="body2" color="text.secondary">
               {additionalInfo}
             </Typography>
-          </Grid>
-          <Grid item xs={6}>
-            {fruitName && <WeekImage weekNumber={weeksPregnant} />}
           </Grid>
         </Grid>
       </CardContent>
