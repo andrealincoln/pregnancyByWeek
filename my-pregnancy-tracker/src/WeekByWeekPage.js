@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
 import {Typography, Card, CardContent, Button, Box, Link, Grid} from '@mui/material';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
 import weekData from './assets/WeekDataJson.json';
 import fruitData from './assets/WeekFruits.json';
 import defaultImage from './FruitImageAssets/defaultImage.jpg';
@@ -24,6 +30,131 @@ function WeekImage({ weekNumber }) {
 
   return imgSrc ? <img src={imgSrc} style={{ height: '100px' , borderRadius: '50px'}} alt={`Week ${weekNumber}`} /> : null;
 }
+
+function HealthLinksNarative() {
+  return(
+    <Accordion sx={{  margin: 'auto', marginTop: 1, backgroundColor: "#f7fdf9"}}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography component="div">
+          Andrea's Narative Summary
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <Typography>
+          I aim to cover what I learned about pregnancy that wasn't immediately obvious to me.
+        </Typography>
+        <Typography>
+          Certain drugs and foods that are typically harmless can pose risks during pregnancy, such as alcohol.
+          The risk with food (e.g. deli meats, soft cheeses) often relates to infection, which can also endanger the
+          fetus. Drugs generally considered toxic are
+          likely to be harmful during pregnancy. However, there are many medications whose risks may seem
+          surprising or random; for example, it is recommended that pregnant women avoid taking ibuprofen.
+          I recommend explicitly consulting your doctor and/or researching any prescription or over-the-counter
+          medication or supplement before use.
+        </Typography>
+        <Typography>
+          Virtually all mild to moderate exercise is safe during pregnancy, but some activities may become challenging
+          as pregnancy progresses. For intense exercises that carry a higher risk of injury or require extensive
+          recovery, such as boxing or marathon running, it's wise to do some research beforehand. Staying in shape not
+          only provides the usual health benefits but also potentially give you more endurance for labor.
+        </Typography>
+        <Typography>
+          Pregnancy impacts bodies in vastly different ways. To illustrate, 30% of individuals experience no morning
+          sickness, while 3% suffer from severe vomiting multiple times a day, requiring special medical attention to
+          manage dehydration and weight loss. Most fall somewhere in between. Pregnancy can also present various
+          complications that affect approximately 5% of women. This leads to diverse experiences, ranging from those
+          who find pregnancy effortless and insist it is a state of wellness, to others who endure significant
+          hardships, such as frequent hospital visits, gestational diabetes, or complications that might necessitate
+          bed rest. I say all of this to make horror stories less alarming while also reassuring you that not having a
+          "normal pregnancy" is, in fact, very normal.
+          Pregnancy often involves unique, unpredictable
+          symptoms—similar to a mild illness in the first trimester and akin to carrying an overly heavy backpack in
+          the last. You'll face additional restrictions, like being unable to take most pain medications. For any
+          specific issues that arise, consulting with your doctor and researching can let you mitigate issues.
+        </Typography>
+        <Typography>
+          Now, let me step onto my personal soapbox. Approximately 10% of women have hypothyroidism. Untreated or
+          inadequately treated hypothyroidism is linked to adverse outcomes. While the U.S. is quite good at
+          screening for hypothyroidism, considering the significance for pregnancy, I recommend asking your doctor to
+          test your thyroid function if you are planning to try getting pregnant. If you have any of your own interesting
+          health quirks make sure to bring them up to your doctor and read up on pregnancy with the condition.
+        </Typography>
+        <Typography>
+          Pregnancy is, as my husband memorably put it, quite metal. Your body undergoes intense changes to accommodate
+          the growth of a fetus into a baby. During this time, seemingly minor adjustments can have surprisingly
+          significant impacts on the future child. Don't let this overwhelm you. We always operate under some level of
+          uncertainty. Do your best, follow medical advice, and consider checking recent literature reviews for new
+          and helpful insights.
+        </Typography>
+
+      </AccordionDetails>
+    </Accordion>
+  );
+}
+
+function HealthLinksAccordion() {
+  return (
+    <Accordion sx={{  margin: 'auto', marginTop: 1, backgroundColor: "#ecfaf1"}}>
+      <AccordionSummary
+        expandIcon={<ExpandMoreIcon />}
+        aria-controls="panel1a-content"
+        id="panel1a-header"
+      >
+        <Typography variant="h6" component="div">
+          General Pregnancy Health Links & Information
+        </Typography>
+      </AccordionSummary>
+      <AccordionDetails>
+        <HealthLinksNarative/>
+        <Typography>
+          General Guides
+        </Typography>
+        <Typography>
+          <Link href="https://www.amazon.com/What-Expect-When-Youre-Expecting/dp/0761187480" target="_blank" rel="noopener noreferrer">
+            The classic What to Expect When You're Expecting book is a great general guide to stndard medical advice and
+            what is normal during pregnancy.
+          </Link>
+        </Typography>
+        <Typography>
+          <Link href="https://www.amazon.com/Expecting-Better-Conventional-Pregnancy-Wrong-ebook/dp/B00AEBEQUK/" target="_blank" rel="noopener noreferrer">
+            Emily Oster gives a useful delta to standard pregnancy advice. I have some (mild) complaints ask me if you
+            want an
+            earful.
+          </Link>
+        </Typography>
+        <Typography>
+          <Link href="https://www.astralcodexten.com/p/obscure-pregnancy-interventions-much" target="_blank" rel="noopener noreferrer">
+            Scott gives his speculative pregnancy advice ("a list of the most extreme things you could do if you
+            were neurotic and had no sense of proportion").
+          </Link>
+        </Typography>
+        <Typography>
+          Specific Guides
+        </Typography>
+        <Typography>
+          <Link href="https://www.aafp.org/pubs/afp/issues/2003/0615/p2517.html" target="_blank" rel="noopener noreferrer">
+            AAFP Over the counter drug list information for pregnancy 2003
+          </Link>
+        </Typography>
+        <Typography>
+          <Link href="https://www.drugs.com/pregnancy/" target="_blank" rel="noopener noreferrer">
+            Drugs.com list of pregnancy links (mostly drug related)
+          </Link>
+        </Typography>
+        <Typography>
+          <Link href="https://www.cdc.gov/physicalactivity/basics/pregnancy/index.htm" target="_blank" rel="noopener noreferrer">
+            CDC Pregnancy Exercise Recommendations 2018
+          </Link>
+        </Typography>
+      </AccordionDetails>
+    </Accordion>
+  );
+}
+
 
 function WeekByWeekPage() {
   const { dueDate, name } = useParams();
@@ -73,6 +204,7 @@ function WeekByWeekPage() {
             </Grid>
           </Grid>
           <PregnancyInfoCard daysPregnant={daysPregnant} name={name} />
+          <HealthLinksAccordion />
           <ExternalRainbowButtons currentWeek={currentWeek} />
         </CardContent>
       </Card>
