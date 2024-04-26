@@ -6,6 +6,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import LinearProgress from '@mui/material/LinearProgress';
+
 
 import weekData from './assets/WeekDataJson.json';
 import fruitData from './assets/WeekFruits.json';
@@ -293,6 +295,8 @@ function ExternalRainbowButtons({currentWeek}){
 
 function PregnancyInfoCard({ daysPregnant, name }) {
   const weeksPregnant = Math.floor(daysPregnant / 7);
+  const totalDays = 40 * 7; // Total days in a typical 40-week pregnancy
+  const percentagePregnant = Math.floor((daysPregnant / totalDays) * 100);
   const daysToBirth = 40*7-daysPregnant;
   const weeksToBirth = Math.floor(daysToBirth / 7);
   let trimester;
@@ -352,6 +356,11 @@ return (
             <Typography variant="body2" color="text.secondary">
               {additionalInfo}
             </Typography>
+            <Typography variant="h6" component="div" style={{ marginTop: 20 }}>
+              Pregnancy Progress: {percentagePregnant}%
+            </Typography>
+            <LinearProgress variant="determinate" value={percentagePregnant} />
+
           </Grid>
         </Grid>
       </CardContent>
