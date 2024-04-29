@@ -6,7 +6,8 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import LinearProgress from '@mui/material/LinearProgress';
+
+import PregnancyProgressBar from './PregnancyProgressBar';
 
 
 import weekData from './assets/WeekDataJson.json';
@@ -304,6 +305,7 @@ function PregnancyInfoCard({ daysPregnant, name }) {
   const weekInfo = weekData[weeksPregnant];
   const fruitName = fruitData[weeksPregnant];
   const yourComputed = name ? name+"'s" : "Your";
+  const yourComputedLC = name ? name+"'s" : "your";
   const youAreComputed = name ? name+" is" : "You are";
   const youHaveComputed = name ? name+" has" : "You have";
 
@@ -337,7 +339,7 @@ return (
               <>
                 <Typography variant="body1" color="text.secondary">
                   {yourComputed} fetus is an estimated {weekInfo["lengthInches"]}in long and weighs {weekInfo["weightLb"]}lbs.
-                  In metric your fetus is  {weekInfo["lengthCm"]}cm long and weighs {weekInfo["massG"]}g.
+                  In metric {yourComputedLC} fetus is  {weekInfo["lengthCm"]}cm long and weighs {weekInfo["massG"]}g.
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
                   (
@@ -359,7 +361,7 @@ return (
             <Typography variant="h6" component="div" style={{ marginTop: 20 }}>
               Pregnancy Progress: {percentagePregnant}%
             </Typography>
-            <LinearProgress variant="determinate" value={percentagePregnant} />
+            <PregnancyProgressBar value={percentagePregnant} />
 
           </Grid>
         </Grid>
