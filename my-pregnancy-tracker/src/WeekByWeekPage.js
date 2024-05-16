@@ -112,7 +112,6 @@ function HealthLinksAccordion() {
         </Typography>
       </AccordionSummary>
       <AccordionDetails>
-        <HealthLinksNarative/>
         <Typography>
           General Guides
         </Typography>
@@ -191,7 +190,7 @@ function WeekByWeekPage() {
                       {name} is pregnant!
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      They got this!
+                      You got this!
                     </Typography>
                   </>
                   :
