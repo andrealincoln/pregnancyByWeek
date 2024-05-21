@@ -51,43 +51,62 @@ function HealthLinksNarative() {
           I aim to cover what I learned about pregnancy that wasn't immediately obvious to me.
         </Typography>
         <Typography>
-          Certain drugs and foods that are typically harmless can pose risks during pregnancy, such as alcohol.
-          The risk with food (e.g. deli meats, soft cheeses) often relates to infection, which can also endanger the
+          Drugs and food:
+        </Typography>
+        <Typography>
+          Certain drugs and foods that are typically harmless (or treated as such) can be risky during pregnancy, such as alcohol.
+          The risk with food (e.g. deli meats, soft cheeses) often relates to infection, which endangers the
           fetus. Drugs generally considered toxic are
-          likely to be harmful during pregnancy. However, there are many medications whose risks may seem
+          likely to be harmful during pregnancy (e.g. heroin). However, there are many medications whose risks may seem
           surprising or random; for example, it is recommended that pregnant women avoid taking ibuprofen.
-          I recommend explicitly consulting your doctor and/or researching any prescription or over-the-counter
-          medication or supplement before use.
+          I recommend explicitly googling or consulting your doctor about any over-the-counter
+          medication, supplement, cosmetic, etc that you take.
+        </Typography>
+        <Typography>
+          Exercise:
         </Typography>
         <Typography>
           Virtually all mild to moderate exercise is safe during pregnancy, but some activities may become challenging
           as pregnancy progresses. For intense exercises that carry a higher risk of injury or require extensive
           recovery, such as boxing or marathon running, it's wise to do some research beforehand. Staying in shape not
-          only provides the usual health benefits but also potentially give you more endurance for labor.
+          only provides the usual health benefits but also potentially give you more endurance for labor. TLDR: exercise
+          is good, injury is bad.
+        </Typography>
+        <Typography>
+          Variance:
         </Typography>
         <Typography>
           Pregnancy impacts bodies in vastly different ways. To illustrate, 30% of individuals experience no morning
           sickness, while 3% suffer from severe vomiting multiple times a day, requiring special medical attention to
           manage dehydration and weight loss. Most fall somewhere in between. Pregnancy can also present various
-          complications that affect approximately 5% of women. This leads to diverse experiences, ranging from those
+          complications that affect approximately 5% of women. This leads to very different experiences, ranging from
+          people
           who find pregnancy effortless and insist it is a state of wellness, to others who endure significant
           hardships, such as frequent hospital visits, gestational diabetes, or complications that might necessitate
           bed rest. I say all of this to make horror stories less alarming while also reassuring you that not having a
           "normal pregnancy" is, in fact, very normal.
+          Also, I think this explains why you can easily find people complaining that no one tells you how hard pregnancy
+          is while also finding people who complain that no one tells you how easy pregnancy is.
           Pregnancy often involves unique, unpredictable
-          symptoms—similar to a mild illness in the first trimester and akin to carrying an overly heavy backpack in
+          symptoms—similar to a mild flu in the first trimester and akin to constantly carrying an overly heavy backpack in
           the last. You'll face additional restrictions, like being unable to take most pain medications. For any
           specific issues that arise, consulting with your doctor and researching can let you mitigate issues.
         </Typography>
         <Typography>
+          My Soap Box:
+        </Typography>
+        <Typography>
           Now, let me step onto my personal soapbox. Approximately 10% of women have hypothyroidism. Untreated or
-          inadequately treated hypothyroidism is linked to adverse outcomes. While the U.S. is quite good at
+          inadequately treated hypothyroidism is linked to adverse outcomes during pregnancy. While the U.S. is quite good at
           screening for hypothyroidism, considering the significance for pregnancy, I recommend asking your doctor to
           test your thyroid function if you are planning to try getting pregnant. If you have any of your own interesting
           health quirks make sure to bring them up to your doctor and read up on pregnancy with the condition.
         </Typography>
         <Typography>
-          Pregnancy is, as my husband memorably put it, quite metal. Your body undergoes intense changes to accommodate
+          TLDR:
+        </Typography>
+        <Typography>
+          Pregnancy is, as Adam memorably put it, quite metal. Your body undergoes intense changes to accommodate
           the growth of a fetus into a baby. During this time, seemingly minor adjustments can have surprisingly
           significant impacts on the future child. Don't let this overwhelm you. We always operate under some level of
           uncertainty. Do your best, follow medical advice, and consider checking recent literature reviews for new
@@ -152,6 +171,7 @@ function HealthLinksAccordion() {
             CDC Pregnancy Exercise Recommendations 2018
           </Link>
         </Typography>
+        <HealthLinksNarative/>
       </AccordionDetails>
     </Accordion>
   );
