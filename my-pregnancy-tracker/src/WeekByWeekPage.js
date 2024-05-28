@@ -333,10 +333,10 @@ function PregnancyInfoCard({ daysPregnant, name }) {
   if (weeksPregnant >= 2 && weeksPregnant <= 12) {
     trimester = "first";
     additionalInfo = "This is a crucial time for the development of the baby's vital organs.";
-  } else if (weeksPregnant >= 13 && weeksPregnant <= 26) {
+  } else if (weeksPregnant >= 13 && weeksPregnant <= 27) {
     trimester = "second";
     additionalInfo = "The risk of miscarriage drops significantly. This is often considered the easiest trimester.";
-  } else if (weeksPregnant >= 27 && weeksPregnant <= 42) {
+  } else if (weeksPregnant >= 28 && weeksPregnant <= 42) {
     trimester = "third";
     additionalInfo = "The baby is growing larger and getting ready for birth. You might start to feel more discomfort.";
   } else {
