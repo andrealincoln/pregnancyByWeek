@@ -318,7 +318,7 @@ function PregnancyInfoCard({ daysPregnant, name }) {
   const totalDays = 40 * 7; // Total days in a typical 40-week pregnancy
   const percentagePregnant = Math.floor((daysPregnant / totalDays) * 100);
   const daysToBirth = 40*7-daysPregnant;
-  const weeksToBirth = Math.floor(daysToBirth / 7);
+  const weeksToBirth = (daysToBirth / 7).toFixed(1);
   let trimester;
   let additionalInfo;
   const weekInfo = weekData[weeksPregnant];
